@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10101c">
+<title>STAR SMASH</title>
+<style>
+:root{color-scheme:dark;--bg:#10101c;--panel:#1b1b2b;--line:#34344d;--gold:#ffc857;--muted:#aaaac0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -15%,#38305d 0,#171629 42%,var(--bg) 75%);color:#fff;font:16px system-ui,-apple-system,sans-serif;min-height:100vh}
+main{max-width:720px;margin:auto;padding:24px 16px 48px}.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-weight:1000;letter-spacing:2px;font-size:25px}.tag{color:var(--gold);font-size:12px;letter-spacing:2px}
+.profile,.panel{background:linear-gradient(145deg,#24243a,#171725);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:18px;box-shadow:0 12px 35px #0004}
+.profile h2{margin:0 0 5px}.muted{color:var(--muted);font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:15px}.stat{background:#11111e;border:1px solid #303047;border-radius:13px;padding:12px;text-align:center}.stat b{display:block;font-size:19px;color:var(--gold)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center}.fighter{min-height:190px;border-radius:16px;background:linear-gradient(145deg,#353052,#1a1a2b);display:grid;place-items:center;font-size:76px;border:1px solid #494365}
+h3{margin:0 0 13px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+button{width:100%;border:1px solid #484763;border-radius:14px;background:#29283f;color:white;padding:15px 12px;font-size:15px;font-weight:700;text-align:left;cursor:pointer}
+button:active{transform:scale(.98)}button span{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:4px}
+.primary{background:linear-gradient(110deg,#f5b93e,#f08a35);border:0;color:#21172a;text-align:center;font-size:17px}
+.primary span{color:#3c2b30}.notice{margin-top:15px;padding:12px;border-radius:12px;background:#121220;color:var(--muted);font-size:12px;line-height:1.5}
+footer{text-align:center;color:#77778f;font-size:12px;margin-top:24px}
+@media(max-width:480px){.hero{grid-template-columns:1fr}.fighter{min-height:150px}.stats{gap:6px}.stat{padding:9px 4px}.logo{font-size:21px}}
+</style>
+</head>
+<body><main>
+<header class="top"><div><div class="logo">⭐ STAR SMASH</div><div class="tag">BATTLE • COLLECT • WIN</div></div><div>🌐 RU</div></header>
+<section class="profile">
+<div class="hero"><div><div class="muted">ТВОЙ ПРОФИЛЬ</div><h2>Игрок STAR SMASH</h2><div class="muted">Добро пожаловать в игру!</div></div><div class="fighter" aria-label="Боец">🥷</div></div>
+<div class="stats"><div class="stat">🏆<b>0</b><small>Кубки</small></div><div class="stat">💎<b>0</b><small>Самоцветы</small></div><div class="stat">🪙<b>0</b><small>Монеты</small></div></div>
+</section>
+<section class="panel"><h3>🎮 Главное меню</h3><div class="grid">
+<button onclick="notice('Раздел «Мои бойцы» будет подключён на следующем этапе.')">🥷 Мои бойцы<span>Коллекция и улучшения</span></button>
+<button onclick="notice('Раздел «Дуэли» будет подключён на следующем этапе.')">⚔️ Дуэли 1 на 1<span>Сразись с игроками</span></button>
+<button onclick="notice('Одиночное столкновение будет подключено на следующем этапе.')">🔥 Одиночное столкновение<span>Сражение на выживание</span></button>
+<button onclick="notice('Башня будет подключена на следующем этапе.')">🗼 Башня<span>Поднимайся и получай награды</span></button>
+<button onclick="notice('Магазин будет подключён на следующем этапе.')">🛒 Магазин<span>Бойцы и предметы</span></button>
+<button onclick="notice('Ящики будут подключены на следующем этапе.')">🎁 Ящики<span>Открывай награды</span></button>
+</div><div class="notice" id="message">Это стартовая веб-страница. Пока здесь демонстрационный интерфейс: аккаунты, матчи и сохранение прогресса ещё не подключены.</div></section>
+<button class="primary" style="margin-top:16px" onclick="notice('Подключение Telegram Mini App и игровых данных — следующий этап.')">🚀 ВОЙТИ В STAR SMASH<span>Открыть игру</span></button>
+<footer>STAR SMASH • Web App prototype</footer></main>
+<script>function notice(t){document.getElementById('message').textContent=t}</script>
+</body></html>
